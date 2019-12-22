@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ area }} index</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+        {% for columns in columns_lst  %}
+            <th>{{ columns }}</th>
+        {% endfor %}
+        </tr>
+
+            {% for dict in lst_info %}
+            <tr>
+                {% for columns in columns_lst %}
+                        {% if columns == "url" %}
+                            <td><a href="{{  dict[columns]}}">{{ dict[columns] }}</a></td>
+                        {% else %}
+                            <td>{{ dict[columns] }}</td>
+                        {% endif %}
+
+                    {% endfor %}
+
+            </tr>
+                {% endfor %}
+
+
+    </table>
+</body>
+</html>

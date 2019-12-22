@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BJ pie</title>
+    <style type="text/css">
+    img {
+        position: relative;
+        float: left;
+    }
+
+    ul {
+        list-style: none;
+        float: left;
+        margin-top: 100px;
+    {#display: block;#}
+    }
+
+    a {
+        display: block;
+        margin-top: 3px;
+        text-decoration: none;
+    }
+
+</style>
+
+</head>
+<body>
+    <img src="{{  url_for('static',filename = 'BJ_pie.png')}}"/>
+    <ul>
+        {% for area in BJ_area_lst %}
+
+        <a href="/BJ/index/{{ area }}"><li>{{ area }}</li></a>
+
+        {% endfor %}
+
+
+    </ul>
+
+
+</body>
+</html>

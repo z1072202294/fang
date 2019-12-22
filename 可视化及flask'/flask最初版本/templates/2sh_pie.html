@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SH pie</title>
+    <style type="text/css">
+
+        img {
+            position: relative;
+            float: left;
+        }
+
+        ul {
+            list-style: none;
+            float: left;
+            margin-top: 100px;
+        {#display: block;#}
+        }
+
+        a {
+            display: block;
+            margin-top: 3px;
+            text-decoration: none;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<img src="{{  url_for('static',filename = 'SH_pie.png')}}"/>
+<ul>
+        {% for area in SH_area_lst %}
+{#            <li>{{ area }}</li>#}
+            <a href="/SH/index/{{ area }}"><li>{{ area }}</li></a>
+        {% endfor %}
+</ul>
+
+</body>
+</html>
